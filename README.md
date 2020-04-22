@@ -30,7 +30,6 @@ the image and filter out the noise.
 -  Filter the data by obtaining the moving average
 
 
-
 ## Image Frame to World Frame Transformation:
 
 ---
