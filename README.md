@@ -32,6 +32,8 @@ the image and filter out the noise.
 
 
 ## Image Frame to World Frame Transformation:
+
+---
 Ball location and radius are obtained in the camera frame and are to be transformed into the world frame.
 
 X_worldframe = X_imgframe * Radius/r_measured
@@ -42,6 +44,8 @@ The focal length of the camera was obtained experimentally, details in the next 
 
 ## Calibration - Focal length determination:
 
+---
+
 Focal length was determined by measuring ball radius keeping it at various distances from the camera at an interval of 5 inches as shown below:
 
 Focal Length, F = Z_worldframe * r_measured/ Actual_R
@@ -50,3 +54,5 @@ Least square estimate of Focal length, F = ∑ Z_worldframe/(∑ Actual_R/r_meas
 
 
 ## UKF/EKF Estimator
+
+---
