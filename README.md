@@ -36,7 +36,9 @@ the image and filter out the noise.
 Ball location and radius are obtained in the camera frame and are to be transformed into the world frame.
 
 X_worldframe = X_imgframe * Radius/r_measured
+
 Y_worldframe = Y_imgframe * Radius/r_measured
+
 Z_worldframe = (focal length)*Radius/r_measured
 
 The focal length of the camera was obtained experimentally, details in the next section.
