@@ -4,7 +4,7 @@
 
 
 ## Object Detection:
-![](gif/tracking_1.gif)
+![](Gifs/Tracking.gif)
 We are using the Hue/ HSV based OpenCV vision algorithm to detect the ball and determine it’s relative pixel position.  Utilizing contour detection algorithms, ball radius and center coordinate are determined.
 
 The detection approach can be summarized as follows:
@@ -31,7 +31,6 @@ The following choices are enabled in the ball tracking code
 - Real time Object detection using a Web Camera/ USB Camera
 - Real Time Object detection using a Mobile Camera - images are fed using an IP camera from the smart phone
 
-![](gif/tracking_2.gif)
 
 ## Image Frame to World Frame Transformation:
 Ball location and radius are obtained in the camera frame and are to be transformed into the world frame.
@@ -56,19 +55,21 @@ Least square estimate of Focal length, F = ∑ Z_worldframe/(∑ Actual_R/r_meas
 Filterpy package was used for UKF implementation. For the unscented transform, the sigma points were generated using method suggested by Van der Merwe et al using MerweScaledSigmaPoints in the Filterpy package. It was found to be the method discussed in the class. 
 
 UKF.py is a Google colaboratory python notebook. The code is logically divided into cells making it easy to understand. The comments in the file are self explanatory. 
+![](Gifs/UKF.gif)
+
 
 ## LSE implementation 
 Given the data points over a time range and trying to fit them to the model of a projectile, it was decided to have a least squares fit to identify the initial velocities in both directions to be applied to the projectile model.
 
 LSE.py has the needed equations and the closed form solution for finding the Velocities
-
+![](Gifs/LSE.gif)
 ## Results
 
 ### LSE vs LSE
-![](gif/lse_vs_lse.gif)
-### LSE vs UKF
-![](gif/lse_vs_ukf.gif)
+![](Gifs/LSE_vs_LSE_Part.gif)
+### UKF vs LSE
+![](Gifs/UKF_vs_LSE.gif)
 ### LSE vs UKF Part
-![](gif/lse_vs_ukf_part.gif)
+![](Gifs/LSE_vs_UKF_Part.gif)
 
 
