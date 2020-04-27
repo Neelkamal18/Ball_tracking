@@ -54,6 +54,13 @@ Focal Length, F = Z_worldframe * r_measured/ Actual_R
 Least square estimate of Focal length, F = ∑ Z_worldframe/(∑ Actual_R/r_measured)
 
 
-## UKF/EKF Estimator
+## UKF implementation
+
+---
+Filterpy package was used for UKF implementation. For the unscented transform, the sigma points were generated using method suggested by Van der Merwe et al using MerweScaledSigmaPoints in the Filterpy package. It was found to be the method discussed in the class. 
+
+UKF.py is a Google colaboratory python notebook. The code is logically divided into cells making it easy to understand. The comments in the file are self explanatory. 
+
+
 
 ---
