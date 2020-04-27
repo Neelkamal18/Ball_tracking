@@ -1,7 +1,7 @@
 # Object Tracking using Kalman Filters
 
 > This is a project that is done as part of the course requiements for MEEN 689 - Robotic Perception. In brief, the project deals with identifying an object of a particular color in a contrasting background and extracting its coordinates and size in the camera frame. Upon applying a suitable version of the Kalman Filter, we track the object real time and with the measurements from object detection, estimate the position of the object in World Coordinates.
-
+![](gif/tracking_1.gif)
 ## Object Detection:
 We are using the Hue/ HSV based OpenCV vision algorithm to detect the ball and determine it’s relative pixel position.  Utilizing contour detection algorithms, ball radius and center coordinate are determined.
 
