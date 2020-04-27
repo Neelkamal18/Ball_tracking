@@ -1,8 +1,10 @@
 # Object Tracking using Kalman Filters
 
 > This is a project that is done as part of the course requiements for MEEN 689 - Robotic Perception. In brief, the project deals with identifying an object of a particular color in a contrasting background and extracting its coordinates and size in the camera frame. Upon applying a suitable version of the Kalman Filter, we track the object real time and with the measurements from object detection, estimate the position of the object in World Coordinates.
-![](gif/tracking_1.gif)
+
+
 ## Object Detection:
+![](gif/tracking_1.gif)
 We are using the Hue/ HSV based OpenCV vision algorithm to detect the ball and determine it’s relative pixel position.  Utilizing contour detection algorithms, ball radius and center coordinate are determined.
 
 The detection approach can be summarized as follows:
@@ -21,7 +23,15 @@ The detection approach can be summarized as follows:
 
 -  Filter the data by obtaining the moving average
 
+## Ways to capture data for object detection
+> Due to the limitations in the equipment to capture images, we explored different ways to capture and calibrate from the sources we had
 
+The following choices are enabled in the ball tracking code
+- Object Detection taken from a video
+- Real time Object detection using a Web Camera/ USB Camera
+- Real Time Object detection using a Mobile Camera - images are fed using an IP camera from the smart phone
+
+![](gif/tracking_2.gif)
 
 ## Image Frame to World Frame Transformation:
 Ball location and radius are obtained in the camera frame and are to be transformed into the world frame.
@@ -47,7 +57,18 @@ Filterpy package was used for UKF implementation. For the unscented transform, t
 
 UKF.py is a Google colaboratory python notebook. The code is logically divided into cells making it easy to understand. The comments in the file are self explanatory. 
 
-
 ## LSE implementation 
+Given the data points over a time range and trying to fit them to the model of a projectile, it was decided to have a least squares fit to identify the initial velocities in both directions to be applied to the projectile model.
+
+LSE.py has the needed equations and the closed form solution for finding the Velocities
+
+## Results
+
+### LSE vs LSE
+![](gif/lse_vs_lse.gif)
+### LSE vs UKF
+![](gif/lse_vs_ukf.gif)
+### LSE vs UKF Part
+![](gif/lse_vs_ukf_part.gif)
 
 
